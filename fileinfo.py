@@ -50,3 +50,40 @@ def times(stext):
             tims.append(1)
     for i in range(len(word)):
         print(word[i],tims[i])
+
+
+#定义关键词输出及画图函数
+def important(stext):
+    impword=[]
+    imptims=[]
+    for i in stext:
+        if i not in stoplist:
+            if i not in impword:
+                impword.append(i)
+                imptims.append(1)
+            else:
+                impnub=impword.index(i)
+                imptims[impnub]+=1
+    at=1
+    maxword=[]
+    maxtims=[]
+    while at<=6:
+        maxt=max(imptims)
+        maxtims.append(maxt)
+        maxw=imptims.index(maxt)
+        maxword.append(impword[maxw])
+        impword.remove(impword[maxw])
+        imptims.remove(maxt)
+        at=at+1
+    maxtims=np.array(maxtims)
+    maxword=np.array(maxword)
+    width=0.35
+    fig,ax=plt.subplots()
+    rects1=ax.bar(maxword,maxtims,width)
+    plt.show()
+    
+#创建超链接所用函数
+def pm():
+    wb.open('http://mail.163.com/')
+def bd():
+    wb.open('http://www.baidu.com/')
