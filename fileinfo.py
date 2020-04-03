@@ -102,3 +102,6 @@ b4=Button(top,width=25,text='网易邮箱',command=lambda:pm(),bg='yellow',fg='g
 b5=Button(top,width=25,text='百度一下',command=lambda:bd(),bg='yellow',fg='green')
 b4.grid_configure(column=3,row=3,columnspan=1,rowspan=1)
 b5.grid_configure(column=2,row=3,columnspan=1,rowspan=1)
+l1=Label(top,width=25,text='网页链接',bg='yellow',fg='green')
+l1.grid_configure(column=1,row=3,columnspan=1,rowspan=1)
+mainloop()
