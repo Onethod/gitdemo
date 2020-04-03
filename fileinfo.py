@@ -30,3 +30,9 @@ text=text.replace('\"',' ')
 text=text.replace('\'',' ')
 #化为包含单词的列表
 stext=text.split()
+
+#定义统计单词数函数
+def total(stext):
+    lens=len(stext)
+    print(lens)
+    ms.showinfo(title='全文总词数',message='总词数为:'+str(lens))
