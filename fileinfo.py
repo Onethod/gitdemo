@@ -93,3 +93,8 @@ b1.grid_configure(column=1,row=1,columnspan=1,rowspan=1)
 b2.grid_configure(column=2,row=1,columnspan=1,rowspan=1)
 b3.grid_configure(column=3,row=1,columnspan=1,rowspan=1)
 t1=Text(top,bg='yellow',fg='green')
+
+t1=Text(top,bg='yellow',fg='green')
+t1.insert(INSERT,origntext)
+t1.grid_configure(column=1,row=2,columnspan=3,rowspan=1)
+b4=Button(top,width=25,text='网易邮箱',command=lambda:pm(),bg='yellow',fg='green')
