@@ -36,3 +36,17 @@ def total(stext):
     lens=len(stext)
     print(lens)
     ms.showinfo(title='全文总词数',message='总词数为:'+str(lens))
+
+#定义单词使用次数函数
+def times(stext):
+    word=[]
+    tims=[]
+    for i in stext:
+        if i in word:
+            nub=word.index(i)
+            tims[nub]=tims[nub]+1
+        else:
+            word.append(i)
+            tims.append(1)
+    for i in range(len(word)):
+        print(word[i],tims[i])
